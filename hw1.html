@@ -1,10 +1,10 @@
 <script>
 //setting boundaries
+
 var n = 50
-if (n <= 1)
-		{ n == 1}
-if (n >=100)
-		{ n == 100}
+var a = 1
+var z = 100
+
 //First prompt
 
 x = prompt("Is it 50?")
@@ -14,15 +14,17 @@ while (x !== "yes"){
 
 // Less than
 	if ( x == "<"){
-n = n / 2
+z = n
+n = (n+a)/2
 n = Math.round(n)
-x = prompt(n)
+x = prompt("Is your number "+n+"?")
 	}
 //Greater than
 	if ( x == ">"){
-n = n * 1.25
+a = n
+n = (n+z)/2
 n = Math.round(n)
-x = prompt(n)	
+x = prompt("Is your number "+n+"?")	
 	}
 } 
 
