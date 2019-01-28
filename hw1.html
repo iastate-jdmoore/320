@@ -1,0 +1,33 @@
+<script>
+//setting boundaries
+var n = 50
+if (n <= 1)
+		{ n == 1}
+if (n >=100)
+		{ n == 100}
+//First prompt
+
+x = prompt("Is it 50?")
+
+//After prompt response (if negative)
+while (x !== "yes"){
+
+// Less than
+	if ( x == "<"){
+n = n / 2
+n = Math.round(n)
+x = prompt(n)
+	}
+//Greater than
+	if ( x == ">"){
+n = n * 1.25
+n = Math.round(n)
+x = prompt(n)	
+	}
+} 
+
+//After prompt response (if positive)
+if (x == "yes"){ 
+alert("I win again!")
+}	
+</script> 
