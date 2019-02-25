@@ -1,0 +1,32 @@
+<p>Input:<br><textarea id="input" rows="10" cols="80"></textarea>
+<p><button onclick="process()">Process</button>
+<p>Output:<br><textarea id="output" rows="10" cols="80"></textarea>
+
+<script>
+
+function process() {
+	x = document.getElementById("input").value;
+	x = x.toLowerCase();
+	
+	for(i=0; i<x.length; i++){
+		words = x.split(" ");
+		text = words.toString()
+		
+			for(j=0; j<text.length; j++)
+				if (text[j-1] == "a", "an"){	
+
+				letters = text[j].split("");
+						 
+						if(letters[0] !== "a", "e", "i", "o", "u"){
+							x1 = x.replace("an", "a")
+						}
+						if(letters[0] == "a", "e", "i", "o", "u"){
+							var x2 = x1.replace("a", "an")
+						}
+				}
+		}
+		
+	document.getElementById("output").value = x2
+}
+
+</script>
