@@ -1,0 +1,116 @@
+<script>
+var p0 = [
+"The book is ___ the table.",
+"It's dark in here. Please turn the lights ___.",
+"It's cold outside. Put your coat ___.",
+"You must turn the car ___ before you can drive it.",
+"The boy was sitting ___ my shoulders.",
+]
+
+var p1 = [
+"Please take your shoes ___ when you come in.",
+"Try not to fall ___ the balcony.",
+"Turn the car ___ after you park it.",
+"It's too bright in here. Please turn the lights ___.",
+"I cut the tops ___ the strawberries.",
+]
+
+var p2 = [
+"I put the leftovers ___ the fridge.",
+"Let's go ___ this room.",
+"My wallet is ___ my pocket.",
+"There's a rock ___ my shoe.",
+"I've never been ___ here before.",
+]
+
+var p3 = [
+"I just threw the garbage ___.",
+"They walked ___ of the meeting.",
+"Let me get my keys ___ of my bag.",
+"Get ___ of the car!",
+"Soon we'll run ___ of food and water.",
+]
+
+var p4 = [
+"The horse jumped ___ the fence.",
+"The plane flew ___ my house.",
+"I'm going ___ to my friend's house.",
+"I think I just ran ___ a cat.",
+"We have grown very close ___ the years.",
+]
+
+prep = ["on ", "off ", "in ", "out ", "over"]
+
+mastery = [0, 0, 0, 0, 0, 0];
+var index = 0;
+var value = mastery[0];
+while (mastery[0] == 0){
+	for (var i = 1; i < mastery.length; i++) {
+		var random = Math.floor(Math.random() * 4);
+		if (mastery[i] < value) {
+			value = mastery[i];
+			index = i;
+		}
+		if(index = 1) {
+			var random = Math.floor(Math.random() * 4);
+			answer = prompt(p0[random])
+				if(answer == "on") {
+					alert('Correct!')
+					mastery[1] = mastery[1]+1
+				}
+				else{
+					alert('Incorrect!')
+					mastery[1] = mastery[1]-1
+				}
+		}
+		if(index = 2) {
+			var random = Math.floor(Math.random() * 4);
+			answer = prompt(p1[random])
+				if(answer == "off") {
+					alert('Correct!')
+					mastery[2] = mastery[2]+1
+				}
+				else{
+					alert('Incorrect!')
+					mastery[2] = mastery[2]-1
+				}
+		}
+		if(index = 3) {
+			var random = Math.floor(Math.random() * 4);
+			answer = prompt(p2[random])
+				if(answer == "in") {
+					alert('Correct!')
+					mastery[3] = mastery[3]+1
+				}
+				else{
+					alert('Incorrect!')
+					mastery[3] = mastery[3]-1
+				}
+		}
+		if(index = 4) {
+			var random = Math.floor(Math.random() * 4);
+			answer = prompt(p3[random])
+				if(answer == "out") {
+					alert('Correct!')
+					mastery[4] = mastery[4]+1
+				}
+				else{
+					alert('Incorrect!')
+					mastery[4] = mastery[4]-1
+				}
+		}
+		if(index = 5) {
+			var random = Math.floor(Math.random() * 4);
+			answer = prompt(p4[random])
+				if(answer == "over") {
+					alert('Correct!')
+					mastery[5] = mastery[5]+1
+				}
+				else{
+					alert('Incorrect!')
+					mastery[5] = mastery[5]-1
+				}
+		}
+	}
+};
+</script>
