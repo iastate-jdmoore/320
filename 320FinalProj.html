@@ -1,4 +1,27 @@
-consonants:	m ɲ ŋ p b t d k g f v ʂ ʐ h j ɭ ts tʂ dʐ ʍ 
-cons spell:	 ny ng				 sh zh  y l ts ch j
-vowel:		i y u e æ ɑ ɒ
-vow spell:	 oe    ae a o
+<script>
+
+rules = [
+	[/I/,"ON"], [/I/, "ONC"],
+	[/F/, "N"], [/F/, "NC"], [/F/,"ON"], [/F/, "ONC"],
+	[/O/, "b"], [/O/, "d"], 
+	[/N/, "a"], [/N/, "e"],
+	[/C/, "c"], [/C/, "f"], 
+	];
+//I = Initial Syllable; F = Final syllable; O = Onset; N = Nuvleus; C = Coda
+
+word = "I-F";
+
+while(/[A-Z]/.test(word)) {
+	r = rules[parseInt(rules.length * Math.random())]
+	word = word.replace(r[0], r[1])
+};
+document.write(word);
+
+//consonants:	m ɲ ŋ p b t d k g f v ʂ ʐ h j ɭ ts tʂ dʐ ʍ 
+//cons spell:	 ny ng				 sh zh  y l ts ch j
+
+//vowel:		i y u e æ ɑ ɒ
+//vow spell:	 oe    ae a o
+
+
+</script>
