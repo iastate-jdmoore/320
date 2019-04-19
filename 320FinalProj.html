@@ -1,21 +1,46 @@
+<html>
+<body>
+
 <script>
+//<button onclick="generator()">Generate Word</button>
 
-rules = [
-	[/I/,"ON"], [/I/, "ONC"],
-	[/F/, "N"], [/F/, "NC"], [/F/,"ON"], [/F/, "ONC"],
-	[/O/, "b"], [/O/, "d"], 
-	[/N/, "a"], [/N/, "e"],
-	[/C/, "c"], [/C/, "f"], 
-	];
+function generator(){
+
+	var list = new Array(10);
+	var rules = [
+		[/W/, "F"], [/W/, "I-F"],
+		[/I/,"ON"], [/I/, "ONC"],
+		[/F/, "N"], [/F/, "NC"], [/F/,"ON"], [/F/, "ONC"],
+	
+		[/O/, "m"], [/O/, "ɲ"], [/O/, "ŋ"], [/O/, "p"], [/O/, "b"], [/O/, "t"], [/O/, "d"], [/O/, "k"], [/O/, "g"], [/O/, "f"],
+		[/O/, "v"], [/O/, "ʂ"], [/O/, "ʐ"], [/O/, "h"], [/O/, "j"], [/O/, "ɭ"], [/O/, "ts"], [/O/, "tʂ"], [/O/, "dʐ"], [/O/, "ʍ"], 	
+	
+		[/N/, "i"], [/N/, "iy"], [/N/, "iu"], [/N/, "ie"], [/N/, "iæ"], [/N/, "iɑ"], [/N/, "iɒ"],
+		[/N/, "y"], [/N/, "yi"], [/N/, "yu"], [/N/, "ye"], [/N/, "yæ"], [/N/, "yɑ"], [/N/, "yɒ"],
+		[/N/, "u"], [/N/, "ui"], [/N/, "uy"], [/N/, "ue"], [/N/, "uæ"], [/N/, "uɑ"], [/N/, "uɒ"], 
+		[/N/, "e"], [/N/, "ei"], [/N/, "ey"], [/N/, "eu"], [/N/, "eæ"], [/N/, "eɑ"], [/N/, "eɒ"],
+		[/N/, "æ"], [/N/, "æi"], [/N/, "æy"], [/N/, "æu"], [/N/, "æe"], [/N/, "æɑ"], [/N/, "æɒ"], 
+		[/N/, "ɑ"], [/N/, "ɑi"], [/N/, "ɑy"], [/N/, "ɑu"], [/N/, "ɑe"], [/N/, "ɑæ"], [/N/, "ɑɒ"], 
+		[/N/, "ɒ"], [/N/, "ɒi"], [/N/, "ɒy"], [/N/, "ɒu"], [/N/, "ɒe"], [/N/, "ɒæ"], [/N/, "ɒɑ"],
+	
+		[/C/, "m"], [/C/, "p"], [/C/, "f"], [/C/, "v"], [/C/, "t"], [/C/, "d"], [/C/, "mb"], 
+		[/C/, "ɲ"], [/C/, "j"], [/C/, "ŋ"], [/C/, "k"], [/C/, "g"], [/C/, "h"],
+		];
 //I = Initial Syllable; F = Final syllable; O = Onset; N = Nuvleus; C = Coda
-
-word = "I-F";
-
-while(/[A-Z]/.test(word)) {
-	r = rules[parseInt(rules.length * Math.random())]
-	word = word.replace(r[0], r[1])
+		
+		for(i=0; i<list.length; i++){
+			var word = "W";
+			while(/[A-Z]/.test(word)) {
+				r = rules[parseInt(rules.length * Math.random())]
+				word = word.replace(r[0], r[1])
+			};
+			list[i] = '| ' +word+ " |";
+		}
+	document.write(list);
 };
-document.write(word);
+
+generator();
+
 
 //consonants:	m ɲ ŋ p b t d k g f v ʂ ʐ h j ɭ ts tʂ dʐ ʍ 
 //cons spell:	 ny ng				 sh zh  y l ts ch j
@@ -25,3 +50,5 @@ document.write(word);
 
 
 </script>
+</body>
+</html>
