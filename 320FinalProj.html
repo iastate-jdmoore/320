@@ -1,8 +1,10 @@
 <html>
 <body>
 
+<button onclick="generator()">Generate Words</button>
+<div id="output"></div>
+
 <script>
-//<button onclick="generator()">Generate Word</button>
 
 function generator(){
 
@@ -26,7 +28,7 @@ function generator(){
 		[/C/, "m"], [/C/, "p"], [/C/, "f"], [/C/, "v"], [/C/, "t"], [/C/, "d"], [/C/, "mb"], 
 		[/C/, "ɲ"], [/C/, "j"], [/C/, "ŋ"], [/C/, "k"], [/C/, "g"], [/C/, "h"],
 		];
-//I = Initial Syllable; F = Final syllable; O = Onset; N = Nuvleus; C = Coda
+//I = Initial Syllable; F = Final syllable; O = Onset; N = Nucleus; C = Coda
 		
 		for(i=0; i<list.length; i++){
 			var word = "W";
@@ -34,12 +36,12 @@ function generator(){
 				r = rules[parseInt(rules.length * Math.random())]
 				word = word.replace(r[0], r[1])
 			};
-			list[i] = '| ' +word+ " |";
+			list[i] = ' /' +word+ "/";
 		}
-	document.write(list);
+	document.getElementById("output").innerHTML = list.join(",");
 };
 
-generator();
+//generator();
 
 
 //consonants:	m ɲ ŋ p b t d k g f v ʂ ʐ h j ɭ ts tʂ dʐ ʍ 
